@@ -12,6 +12,9 @@ main {
 
 #password_generator {
     background-color: rgb(206, 206, 206);
+    font-style: italic;
+    font-size: 2rem;
+    border-radius: 0.2rem;
 }
 
 .your_password {
