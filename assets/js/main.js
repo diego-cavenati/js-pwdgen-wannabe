@@ -10,12 +10,17 @@ const userSurname = prompt("Qual'è il tuo cognome?");
 const userFavoriteColor = prompt("Qual'è il tuo colore preferito?");
 
 // Step 4: define current year
-const currentYear =  "2022";
-// Take last two number
-const yearPassword = currentYear.substring(2);
+
+// Method 1
+// const currentYear =  "2022";
+// const yearPassword = currentYear.substring(2);
+
+// Method 2
+const currentYear = new Date().toISOString().substring(2,4);
+
 
 // Result: write the result on the page
-const password = (userName + userSurname + userFavoriteColor + yearPassword);
+const password = (userName + userSurname + userFavoriteColor + currentYear);
 console.log(password);
 
 document.getElementById(`password_generator`).innerHTML = password;
